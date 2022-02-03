@@ -48,8 +48,19 @@
          //we take the event and use the dom to change its color 
          event.target.style.backgroundColor = "yellow";
        });
+
+
       //Get element by querySelectorAll
+      const queryBoxes = document.querySelectorAll(" .box-to-select-2");
       //Iterate boxes through a For of loop to add functionallity
+      for (const element of queryBoxes) {
+        //Event Listener to fire a function on clicking 
+        element.addEventListener("click", function(event){
+        //we take the event and use the dom to change its color 
+        event.target.style.backgroundColor = "green" ;
+      
+      });
+    }
   </script>
 </body>
 
