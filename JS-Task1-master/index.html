@@ -24,7 +24,10 @@
 
   <script>
       //Get element by id
-
+      const box =document.getElementById("box-1");
+      box.addEventListener("click", function(event)){
+        console.log(event.target);
+      }
       //Get element by className
 
       //Iterate boxes through a For of loop to add functionallity
