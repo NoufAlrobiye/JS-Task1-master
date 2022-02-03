@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <title>Selecting an Element!</title>
   <meta name="description" content="" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
@@ -24,13 +24,22 @@
 
   <script>
       //Get element by id
-      const box =document.getElementById("box-1");
+      const box = document.getElementById("box-1");
       box.addEventListener("click", function (event){
-        event.target.style.backgroundColor="red";
-      }
+        event.target.style.backgroundColor = "red";
+      })
       //Get element by className
-
+      var boxes = document.getElementsByClassName("box-to-select");
       //Iterate boxes through a For of loop to add functionallity
+      for (const element of boxes){ 
+        //Event Listener to fire a function on clicking 
+        element.addEventListener("click" , function(event) {
+          //we take the event and use the dom to change its color 
+          event.target.style.backgroundColor = "blue";
+
+          console.log(event, "event");
+        });
+      }
       //Get Element with qeurySelector
 
       //Get element by querySelectorAll
