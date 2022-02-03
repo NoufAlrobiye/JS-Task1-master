@@ -40,8 +40,14 @@
           console.log(event, "event");
         });
       }
-      //Get Element with qeurySelector
 
+      //Get Element with qeurySelector
+       queryFifthBox = document.querySelector("div ul #box-5");
+       //Event Listener to fire a function on clicking 
+       queryFifthBox.addEventListener("click", function(event) {
+         //we take the event and use the dom to change its color 
+         event.target.style.backgroundColor = "yellow";
+       });
       //Get element by querySelectorAll
       //Iterate boxes through a For of loop to add functionallity
   </script>
